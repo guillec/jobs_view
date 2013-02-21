@@ -7,11 +7,11 @@ require "jobs_view/version"
 Gem::Specification.new do |s|
   s.name        = "jobs_view"
   s.version     = JobsView::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of JobsView."
-  s.description = "TODO: Description of JobsView."
+  s.authors     = ["Guille Carlos"]
+  s.email       = ["guille@bitpop.in"]
+  s.homepage    = "A lot"
+  s.summary     = "Show your DelayedJobs jobs."
+  s.description = "A rails engine that you include to see your DelayedJobs"
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
