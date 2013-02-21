@@ -1,3 +1,5 @@
+require 'jobs_view/application_controller'
+
 module JobsView
   class JobsController < ApplicationController
     before_filter :jobs_view_authentication
