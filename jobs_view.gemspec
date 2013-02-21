@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = JobsView::VERSION
   s.authors     = ["Guille Carlos"]
   s.email       = ["guille@bitpop.in"]
-  s.homepage    = "A lot"
+  s.homepage    = "https://github.com/guillec/jobs_view"
   s.summary     = "Show your DelayedJobs jobs."
   s.description = "A rails engine that you include to see your DelayedJobs"
 
