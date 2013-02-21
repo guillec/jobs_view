@@ -6,7 +6,14 @@
   <%= javascript_include_tag "jobs_view/application" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body style="padding: 30px">
+
+<ul class="nav nav-pills">
+  <li class="active">
+    <a href="/jobs_view">All</a>
+  </li>
+  <li><a href="/jobs_view?q=errors">Errors</a></li>
+</ul>
 
 <%= yield %>
 

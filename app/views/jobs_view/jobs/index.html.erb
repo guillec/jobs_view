@@ -1,6 +1,6 @@
-<p>Jobs: <%= @jobs.size %></p>
+<h1>Total Jobs: <%= @jobs.size %></h1>
 
-<table class="table" id="jobs">
+<table class="table table-bordered" id="jobs">
     <thead>
       <tr>
         <th>id</th>
@@ -14,6 +14,7 @@
         <th>locked_by</th>
         <th>created_at</th>
         <th>updated_at</th>
+        <th>Delete</th>
       </tr>
     </thead>
     <tbody>
@@ -30,15 +31,11 @@
           <td><%= job.locked_by || '-' %></td>
           <td><%= job.created_at.to_s(:short) %></td>
           <td><%= job.updated_at.to_s(:short) %></td>
+          <td><%= button_to "Delete", "#", confirm: "THIS IS NOT READY hAhA", action: :delete,  class: "btn btn-danger" %></td>
         </tr>
         <tr class="job-details" id="job-details-<%= job.id %>">
-          <td colspan="11">
+          <td colspan="12">
             <p><pre><%= job.to_yaml %></pre></p>
-            <p>
-              <pre>
-              <%= job.last_error.to_s.gsub("\\n", "\n") %>
-              </pre>
-            </p>
           </td>
         </tr>
       <% end %>

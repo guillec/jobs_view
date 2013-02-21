@@ -2,7 +2,11 @@ module JobsView
   class JobsController < ApplicationController
     before_filter :jobs_view_authentication
     def index
-      @jobs = Delayed::Job.all
+      if params[:q]
+        @jobs = Delayed::Job.where("failed_at IS NOT NULL")
+      else
+        @jobs = Delayed::Job.all
+      end
     end
   end
 end
