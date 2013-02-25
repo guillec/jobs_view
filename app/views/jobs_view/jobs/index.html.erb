@@ -31,7 +31,7 @@
           <td><%= job.locked_by || '-' %></td>
           <td><%= job.created_at.to_s(:short) %></td>
           <td><%= job.updated_at.to_s(:short) %></td>
-          <td><%= button_to "Delete", "#", confirm: "THIS IS NOT READY hAhA", action: :delete,  class: "btn btn-danger" %></td>
+          <td><%= button_to "Delete", jobs_view_job_path(job.id),  method: :delete, confirm: "You sure you want to delete this job?", class: "btn btn-danger" %></td>
         </tr>
         <tr class="job-details" id="job-details-<%= job.id %>">
           <td colspan="12">
